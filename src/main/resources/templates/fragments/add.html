@@ -1,0 +1,71 @@
+<div class="container" xmlns:th="http://www.thymeleaf.org" th:fragment="add">
+
+    <!--<div class="col-12-md">-->
+    <!--<form th:action="@{/add}" th:object="${planet}" method="post" action="/add">-->
+
+    <!--<input type="text" name="planetName" placeholder="planet name">-->
+    <!--<input type="number" name="distanceFromSun" placeholder="distanceFromSun">-->
+    <!--<input type="number" step="0.0001" name="oneWayLightTimeToTheSun" placeholder="oneWayLightTimeToTheSun">-->
+    <!--<input type="number" name="lengthOfYear" placeholder="lengthOfYear">-->
+    <!--<textarea rows="4" cols="30" name="planetInfo" placeholder="planetInfo"></textarea>-->
+    <!--<input type="text" name="planetType" placeholder="planet type">-->
+    <!--<input type="text" name="planetImage" placeholder="planetImage">-->
+    <!--<button type="submit" class="btn btn-sm btn-success">create</button>-->
+
+    <!--</form>-->
+    <!--</div>-->
+
+
+    <form th:action="@{/add}" th:object="${planet}" method="post" action="/add">
+        <div class="form-row">
+            <div class="col-sm-12 col-md-6 form-group">
+                <label>Planet Name</label>
+                <input type="text" name="planetName" placeholder="planet name" class="form-control">
+            </div>
+            <div class="col-sm-12 col-md-6 form-group">
+                <label>Distance From Sun</label>
+                <input type="number" name="distanceFromSun" placeholder="distanceFromSun" class="form-control">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="col-sm-12 col-md-6 form-group">
+                <label>One Way Light Time To The Sun</label>
+                <input type="number" step="0.0001" name="oneWayLightTimeToTheSun" placeholder="oneWayLightTimeToTheSun"
+                       class="form-control">
+            </div>
+            <div class="col-sm-12 col-md-6 form-group">
+                <label>Length Of Year</label>
+                <input type="number" name="lengthOfYear" placeholder="lengthOfYear" class="form-control">
+            </div>
+
+        </div>
+        <div class="form-row">
+            <div class="col-sm-12 col-md-6 form-group">
+                <label>Planet Type</label>
+                <input type="text" name="planetType" placeholder="planet type" class="form-control">
+            </div>
+            <div class="col-sm-12 col-md-6 form-group">
+                <label>Planet Image</label>
+                <input type="text" name="planetImage" placeholder="planetImage" class="form-control">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-sm-12 form-group">
+                <label>Planet Info</label>
+                <textarea rows="4" name="planetInfo" placeholder="planetInfo" class="form-control"></textarea>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="col-sm-12 text-right form-group">
+                <button type="submit" class="btn btn-sm btn-success"><i class="fa fa-plus-square"
+                                                                        aria-hidden="true"></i> Create
+                </button>
+            </div>
+        </div>
+    </form>
+
+
+    <hr>
+</div>

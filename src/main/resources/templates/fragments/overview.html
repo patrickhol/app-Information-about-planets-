@@ -1,0 +1,33 @@
+<div class="container" xmlns:th="http://www.thymeleaf.org" th:fragment="planets">
+
+    <div class="row" style="margin: 1vh">
+
+        <div class="card col-xs-12 col-sm-12 col-md-6 col-xl-4" style="background-color: rgba(255,255,255,.4);"
+             th:each="p : ${planets}">
+
+            <!-- Heading -->
+            <div class="card-body">
+                <h4 class="card-title" th:text="${p.getPlanetName()}"></h4>
+            </div>
+
+            <!-- Image -->
+            <img th:src="@{${p.getPlanetImage()}}" alt="Photo of planet" style="height: auto;width: 48%">
+
+            <!-- Text Content -->
+            <div class="card-body">
+                <p class="card-text" th:text="${p.getPlanetInfo()}"></p>
+                <h6><span th:each="tag :${p.getTags()} " class="badge badge-info" th:text="${tag}"
+                          style="margin: 0.5em;"></span></h6>
+                <a class="btn btn-sm btn-warning" th:href="@{/}"><p class="card-text"> more about &nbsp<span
+                        th:text="${p.getPlanetName()}"></span></p></a>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
+
+
+
